@@ -273,25 +273,25 @@ namespace _368._03P
                         comparr002[i] = userPrototype ?? hardPrototype;
                     }
 
-                        List<Computer> Antennable = comparr002.Where(e => e != null).Skip(first).Take(second - first + 1).Where(c => !c.HasAntenna.Equals(null)).ToList();
+                    List<Computer> Antennable = comparr002.Where(e => e != null).Skip(first).Take(second - first + 1).Where(c => !c.HasAntenna.Equals(null)).ToList();
 
-                        double RAMaverage = comparr002.Skip(first).Take(second - first + 1).Where(e => e != null).ToList().Average(e => e.RAM);
+                    double RAMaverage = comparr002.Skip(first).Take(second - first + 1).Where(e => e != null).ToList().Average(e => e.RAM);
 
-                        int percentAntenna = (Antennable.Where(c => (bool)c.HasAntenna).Count() /
-                        Antennable.Count()) * 100;
+                    int percentAntenna = (Antennable.Where(c => (bool)c.HasAntenna).Count() /
+                    Antennable.Count()) * 100;
 
-                        double? hardDAverage = comparr002.Where(e => e != null).Skip(first).Take(second - first + 1)
+                    double? hardDAverage = comparr002.Where(e => e != null).Skip(first).Take(second - first + 1)
                             .ToList().Where(c => !c.HardDCapacity.Equals(null))
                             .Select(e => e.HardDCapacity).Average();
-                        //get List of all computer software license arrays
-                        List<Computer> compLicFirst = comparr002.Where(e => e != null).Skip(first).Take(second - first + 1).ToList();
-                        List<Computer> compLicSecond = new List<Computer>();
-                        for (int i = 0; i < compLicFirst.Count(); i++)
-                        {
-                            compLicSecond[i] = compLicFirst[i] ?? deFault;
-                        }
+                    //get List of all computer software license arrays
+                    List<Computer> compLicFirst = comparr002.Where(e => e != null).Skip(first).Take(second - first + 1).ToList();
+                    List<Computer> compLicSecond = new List<Computer>();
+                    for (int i = 0; i < compLicFirst.Count(); i++)
+                    {
+                        compLicSecond[i] = compLicFirst[i] ?? deFault;
+                    }
 
-                        List<int?[]> compLic = compLicSecond.Where(m => m.SoftwareLic != null).Select(m => m.SoftwareLic).ToList();
+                    List<int?[]> compLic = compLicSecond.Where(m => m.SoftwareLic != null).Select(m => m.SoftwareLic).ToList();
                     //create List of total licenses for each computer 
                     List<int?> licensesPerM = new List<int?>();
                     foreach (var machine in compLic)
