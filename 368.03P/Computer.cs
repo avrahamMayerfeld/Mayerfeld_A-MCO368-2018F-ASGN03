@@ -97,7 +97,7 @@ class Computer
         }
         catch (Exception e) { Console.WriteLine(e.Message); }
         String s = ($"ID - {iD}, Has Antenna - {HasAntenna}, Hard Drive Capacity - {HardDCapacity}, Software Licences - " +
-     $"{printArr}, Ram - {RAM} ");
+        $"{printArr}, Ram - {RAM} ");
         return s;
     }
 }
